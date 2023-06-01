@@ -1,15 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
+
+    <style>
+
+    </style>
 </head>
+
 <body>
-    <header>
-        <h1>Registration Form</h1>
-    </header>
-    
+
+    <form>
+        <header>
+            <h1>Registration Form</h1>
+        </header>
+
+        <main>
+
+            <div class="first-page">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="First Name">
+                <input type="text" id="name" name="name" placeholder="Last Name">
+                <br>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com">
+                <br>
+                <label for="men">Men</label>
+                <input type="radio" name="gender" id="men">
+                <label for="women">Women</label>
+                <input type="radio" name="gender" id="women">
+                <br>
+                <label for="date">Date of Birth</label>
+                <input type="date" name="date" id="date">
+                <br>
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="+373-60-385-444">
+                <br>
+                <label for="address">Home Address</label>
+                <input type="text" name="address" id="address" placeholder="str.Mircea Iliade 20A">
+                <br>
+            </div>
+            <div class="second-page">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username">
+                <br>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+                <br>
+                <label for="password2">Confirm Password</label>
+                <input type="password" name="password2" id="password2">
+                
+            </div>
+            
+
+        </main>
+        <footer>
+            <input type="button" onclick="alert('Operation is successful!')" value="Submit">
+            <input type="reset">
+        </footer>
+
+    </form>
 </body>
+
 </html>
