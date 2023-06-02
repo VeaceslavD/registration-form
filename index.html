@@ -8,34 +8,87 @@
     <title>Registration Form</title>
 
     <style>
+        form { 
+            margin-top: 30px;
+            margin-left: 25%;
+            margin-bottom: 30px;
+            width: 850px;
+            height: 600px;
+            border: 3px solid gray;
+            background-color: lightgray;
+        }
 
+        form header {
+            text-align: center;
+        }
+
+        main {
+            width: 850px;
+            height: 480px;
+            column-count: 2;
+            column-rule: 1px solid gray;
+        }
+
+        .first-page label {
+          margin-left: 5px;
+        }
+
+        .first-page input {
+            padding: 3px;
+            margin-top: 30px;
+            margin-left: 5px;
+        }
+
+        .first-page select {
+            margin-top: 40px;
+        }
+
+        .second-page label {
+          margin-left: 5px;
+        }
+
+        .second-page input {
+            padding: 3px;
+            margin-top: 30px;
+            margin-left: 5px;
+        }
+        
+        .second-page textarea {
+            margin-top: 30px;
+        }
+
+        footer {
+            float: right;
+        }
+
+        footer input {
+           margin-right: 10px; 
+        }
     </style>
 </head>
 
 <body>
-
     <form>
         <header>
             <h1>Registration Form</h1>
         </header>
 
         <main>
-
             <div class="first-page">
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="First Name">
-                <input type="text" id="name" name="name" placeholder="Last Name">
+                <input type="text" id="name" name="name" placeholder="First Name" required>
+                <input type="text" id="name" name="name" placeholder="Last Name" required>
                 <br>
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="example@gmail.com">
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
                 <br>
                 <label for="men">Men</label>
-                <input type="radio" name="gender" id="men">
+                <input type="radio" name="gender" id="men" required>
                 <label for="women">Women</label>
-                <input type="radio" name="gender" id="women">
+                <input type="radio" name="gender" id="women" required>
                 <br>
                 <label for="date">Date of Birth</label>
-                <input type="date" name="date" id="date">
+                <input type="date" name="date" id="date" required>
                 <br>
                 <label for="phone">Phone</label>
                 <input type="tel" id="phone" name="phone" placeholder="+373-60-385-444">
@@ -43,26 +96,48 @@
                 <label for="address">Home Address</label>
                 <input type="text" name="address" id="address" placeholder="str.Mircea Iliade 20A">
                 <br>
+                <label for="jobs">Choose a job</label>
+                <select name="jobs" id="jobs">
+                    <option value="Frontend-Developer">Frontend-Developer</option>
+                    <option value="Backend-Developer">Backend-Developer</option>
+                    <option value="Fullstack-Developer">Fullstack-Developer</option>
+                </select>
+                <br>
+                <label for="file">Choose a file</label>
+                <input type="file" name="file" id="file">
             </div>
+
             <div class="second-page">
+                <label for="country-city"></label>
+                <input type="text" name="country-city" id="country" placeholder="Country">
+                <input type="text" name="country-city" id="city" placeholder="City">
+                <br>
+                <label for="language">Language</label>
+                <input list="languages" name="language" id="language" placeholder="Select">
+                <datalist id="languages">
+                    <option value="French">
+                    <option value="English">
+                    <option value="Romanian">
+                    <option value="German">
+                </datalist>
+                <br>
                 <label for="username">Username</label>
-                <input type="text" name="username" id="username">
+                <input type="text" name="username" id="username" placeholder="Username" required>
                 <br>
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password">
+                <input type="password" name="password" id="password" placeholder="Password" required>
                 <br>
                 <label for="password2">Confirm Password</label>
-                <input type="password" name="password2" id="password2">
-                
+                <input type="password" name="password2" id="password2" placeholder="Confirm password" required>
+                <br>
+                <textarea name="message" id="message" style="width:400px; height:150px;">Leave a message...</textarea>
             </div>
-            
-
         </main>
-        <footer>
-            <input type="button" onclick="alert('Operation is successful!')" value="Submit">
-            <input type="reset">
-        </footer>
 
+        <footer>
+            <input type="reset">
+            <input type="button" onclick="alert('Operation is successful!')" value="Submit">
+        </footer>
     </form>
 </body>
 
